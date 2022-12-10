@@ -32,7 +32,7 @@ public class first {
 		while(count <= deviceNum.length) {
 			for(int i =0; i < deviceNum.length;i++) {
 				arrNum = new int[deviceNum[i]];
-				System.out.println(arrNum.length);
+				System.out.println(arrNum.length); //裝置的數量
 				count +=1;
 	
 				//總共模擬次數100次
