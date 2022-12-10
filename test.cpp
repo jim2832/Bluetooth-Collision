@@ -6,17 +6,15 @@
 using namespace std;
 
 int main(){
-    for(int i=0; i<10; i++){
-        //srand(time(NULL));
+    int arr[2];
+    srand(time(NULL));
+    for(int i=0; i<20; i++){
 
         /* 指定亂數範圍 */
-        int min = 0;
-        int max = 79;
+        int channel_num = 79;
 
-        /* 產生 [min , max] 的整數亂數 */
-        int x = rand() % (max - min + 1) + min;
-
-        cout << x << endl;
+        int rand_num = rand() % (channel_num + 1);
+        
     }
 
     return 0;
