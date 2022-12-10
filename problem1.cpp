@@ -13,7 +13,7 @@ using namespace std;
 
 
 void clean_array(int *arr){
-    int len = sizeof(arr)/sizeof(int);
+    int len = sizeof(&arr)/sizeof(int);
     for(int i=0; i<len; i++){
         arr[i] = 0;
     }
@@ -39,12 +39,12 @@ int main(){
             //每個模擬跳頻1600次
             for(int freq=0; freq<HOPPING_FREQENCY; freq++){
                 //各個裝置
-                for(int dev=0; dev<sizeof(device)/sizeof(device[0]); dev++){
+                for(int dev=0; dev<sizeof(&device)/sizeof(device[0]); dev++){
                     int rand_num = rand() % (CHANNEL + 1);
                     //cout << rand_num << endl;
                     channel_seq[dev] = rand_num;
                     if(dev > 0){
-                        cout << channel_seq[dev-1] << "\t" << channel_seq[dev];
+                        //cout << channel_seq[dev-1] << "\t" << channel_seq[dev];
                         if(channel_seq[dev-1] == channel_seq[dev]){
                             collision_cnt++;
                             //cout << "\t<- Collision!" << endl;
@@ -57,12 +57,12 @@ int main(){
                 }
             }
         }
-        //cout << endl << "有2個裝置的碰撞次數為: " << collision_cnt << endl;
+        cout << endl << "有2個裝置的碰撞次數為: " << collision_cnt << endl;
 
         collision_seq[i] = collision_cnt;
         total_time[i] = SIM_CNT * HOPPING_FREQENCY * device_num[i];
         Prob[i] = (double)collision_seq[i] / total_time[i];
-        cout << total_time[i] << endl;
+        //cout << total_time[i] << endl;
         cout << "有 " << device_num[i] << " 個裝置的碰撞機率為: "  << Prob[i] << endl;
         
         delete[] device;
