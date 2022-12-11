@@ -11,7 +11,7 @@ using namespace std;
 #define MAX_DEV_NUM 100
 #define CHANNEL 79
 
-
+//清空陣列
 void clean_array(int *arr){
     int len = sizeof(&arr)/sizeof(int);
     for(int i=0; i<len; i++){
@@ -60,7 +60,7 @@ int main(){
         cout << endl << "有2個裝置的碰撞次數為: " << collision_cnt << endl;
 
         collision_seq[i] = collision_cnt;
-        total_time[i] = SIM_CNT * HOPPING_FREQENCY * device_num[i];
+        total_time[i] = SIM_CNT * HOPPING_FREQENCY;
         Prob[i] = (double)collision_seq[i] / total_time[i];
         //cout << total_time[i] << endl;
         cout << "有 " << device_num[i] << " 個裝置的碰撞機率為: "  << Prob[i] << endl;
@@ -70,6 +70,7 @@ int main(){
 
     delete[] channel_seq;
     delete[] collision_seq;
+    delete[] total_time;
     delete[] Prob;
 
     return 0;
