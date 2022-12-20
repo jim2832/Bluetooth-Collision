@@ -31,7 +31,7 @@ for sim in range(SIM_CNT):
 prob = total_collision / total_time #平均碰撞機率
 print("兩個裝置的碰撞機率為：", prob)
 
-plt.plot(simulation, probability)
+plt.bar(simulation, probability)
 plt.title("collision simulation of 2 devices") # title
 plt.xlabel("simulation count") # x label
 plt.ylabel("collision probability") # y label
