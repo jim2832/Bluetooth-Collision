@@ -60,13 +60,13 @@ for i in range(1,80):
     #被選中的bad channel
     if(i == selected_bad_channel):
         temp = math.floor(channel_collision_prob[i] * 10)
-        for j in range(temp, 8):
-            bad_channel_cnt[j] += 1
+        for k in range(temp, 8):
+            bad_channel_cnt[k] += 1
     
     #其他的channel
-    for k in range(len(threshold)):
-        if(channel_collision_prob[i] > threshold[k]):
-            bad_channel_cnt[k] += 1
+    for j in range(len(threshold)):
+        if(channel_collision_prob[i] > threshold[j]):
+            bad_channel_cnt[j] += 1
 
 
 """
