@@ -17,8 +17,8 @@ for sim in range(SIM_CNT):
     collision = 0
     simulation.append(sim)
     for freq in range(HOP_FREQ):
-        device0 = random.randint(1, 80) # 1~79
-        device1 = random.randint(1, 80)
+        device0 = random.randint(1, 79) # 1~79
+        device1 = random.randint(1, 79)
         print(device0,"\t",device1)
         #如果挑到的channel一樣，則碰撞+1
         if(device0 == device1):

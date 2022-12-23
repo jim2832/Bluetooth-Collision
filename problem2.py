@@ -12,8 +12,8 @@ channel = [i for i in range(80)] #1~79的channel
 bad_channel_cnt = [0 for i in range(9)] #bad channel的數量
 
 device_select_channel = [] #device_select_channel[0]代表是device 0挑到的channel
-total_channel_collision = [0] * 100 #每個channel碰撞的次數
-channel_collision_prob = [0] * 80 #每個channel碰撞的機率
+total_channel_collision = [0 for i in range(100)] #每個channel碰撞的次數
+channel_collision_prob = [0 for i in range(80)] #每個channel碰撞的機率
 
 """
 process
