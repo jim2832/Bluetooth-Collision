@@ -11,6 +11,7 @@ device_select_channel = [] #device_select_channel[0]代表是device 0挑到的ch
 total_channel_collision = [0 for i in range(80)] #每個channel碰撞的次數
 channel_collision_prob = [0 for i in range(80)] #每個channel碰撞的機率
 
+
 """
 前4秒的 bad channel 機率
 """
@@ -35,6 +36,10 @@ for i in range(1,80):
     channel_collision_prob[i] = round(total_channel_collision[i]/(4*HOP_FREQ),2)
 #print(total_channel_collision)
 
+
 """
 後26秒的碰撞機率
 """
+collision = [[] for i in range(9)] #紀錄佔用的個數
+device_number = [[] for i in range(9)] #device的index
+device_collision = [[] for i in range(9)] #紀錄裝置的碰撞

@@ -1,2 +1,4 @@
-bad_channel_cnt = [0 for i in range(9)] #bad channel的數量
-print(bad_channel_cnt)
+collision = [[] for i in range(9)]
+for i in range(len(collision)):
+    collision[i].append(1)
+print(collision)
