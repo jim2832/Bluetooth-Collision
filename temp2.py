@@ -322,7 +322,7 @@ for i in range(41600):
             host_index9.append(channel_index)   
         
         host_num+=1
-        
+
     host_collision1=collections.Counter(host_index1)
     host_collision2=collections.Counter(host_index2)
     host_collision3=collections.Counter(host_index3)
