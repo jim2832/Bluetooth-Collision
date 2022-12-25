@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 SIM_CNT = 30
 HOP_FREQ = 1600
-DEVICE_CNT = 50
+DEVICE_CNT = 70
 
 threshold = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
 bad_channel_cnt = [0 for i in range(9)] #bad channel的數量
