@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 SIM_CNT = 30
 HOP_FREQ = 1600
-DEVICE_CNT = 70
+DEVICE_CNT = 50
 
 device_select_channel = [] #device_select_channel[0]代表是device 0挑到的channel
 total_channel_collision = [0 for i in range(80)] #每個channel碰撞的次數

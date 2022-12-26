@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 SIM_CNT = 30
 HOP_FREQ = 1600
-DEVICE_CNT = 70
+DEVICE_CNT = 50
 
 threshold = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
 bad_channel_cnt = [0 for i in range(9)] #bad channel的數量
@@ -33,8 +33,8 @@ for sim in range(SIM_CNT):
 
         #20個裝置，建立一個list存每個裝置選到的channel
         for dev in range(DEVICE_CNT):
-            #device_select_channel.append(random.randint(1, 79))
-            device_select_channel.append(round((random.randint(1,79)+random.randint(1,79)+random.randint(1,79))/3))
+            device_select_channel.append(random.randint(1, 79))
+            #device_select_channel.append(round((random.randint(1,79)+random.randint(1,79)+random.randint(1,79))/3))
         #print(device_select_channel)
 
         #判斷是否有碰撞，如果有，則紀錄某個channel的碰撞次數
